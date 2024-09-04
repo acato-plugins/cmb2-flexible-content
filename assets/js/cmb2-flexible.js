@@ -17,10 +17,10 @@ window.CMB2.wysiwyg = window.CMB2.wysiwyg || false;
 			.on( 'click', '.cmb-flexible-add-button', cmb_flexible.removeFlexibleHiddenClass )
 			.on( 'click', '.cmb-shift-flexible-rows', cmb_flexible.shiftRows )
 			.on( 'cmb2_remove_row', cmb_flexible.removeDisabledRows )
-			.on( 'click', '.cmb-flexible-rows .cmb-remove-group-row', cmb_flexible.removeLastRow );
+			.on( 'click', '.cmb-flexible-rows .cmb-remove-flexible-row', cmb_flexible.removeLastRow );
 
 		$( '.cmb-flexible-wrap' ).find( '.cmb-repeatable-grouping' ).each( function() {
-				$( this ).find( '.button.cmb-remove-group-row' ).before( '<a class="button cmb-shift-flexible-rows move-up alignleft" href="#"><span class="'+ l10n.up_arrow_class +'"></span></a> <a class="button cmb-shift-flexible-rows move-down alignleft" href="#"><span class="'+ l10n.down_arrow_class +'"></span></a>' );
+				$( this ).find( '.button.cmb-remove-flexible-row' ).before( '<a class="button cmb-shift-flexible-rows move-up alignleft" href="#"><span class="'+ l10n.up_arrow_class +'"></span></a> <a class="button cmb-shift-flexible-rows move-down alignleft" href="#"><span class="'+ l10n.down_arrow_class +'"></span></a>' );
 		} );
 	};
 
@@ -33,7 +33,7 @@ window.CMB2.wysiwyg = window.CMB2.wysiwyg || false;
 	cmb_flexible.removeDisabledRows = function( evt ) {
 		var $el = $( evt.target );
 		if (  $el.find( '.cmb-flexible-rows' ).length > 0 ) {
-			$el.find( '.cmb-remove-group-row' ).prop( 'disabled', false );
+			$el.find( '.cmb-remove-flexible-row' ).prop( 'disabled', false );
 			cmb_flexible.resetIterators( $el );
 		}
 	};
@@ -99,7 +99,10 @@ window.CMB2.wysiwyg = window.CMB2.wysiwyg || false;
 				var newRow = flexible_wrap.find( '.cmb-repeatable-grouping' ).last();
 				cmb.newRowHousekeeping( newRow );
 				cmb.afterRowInsert( newRow );
-				$( newRow ).find( '.button.cmb-remove-group-row' ).before( '<a class="button cmb-shift-flexible-rows move-up alignleft" href="#"><span class="'+ l10n.up_arrow_class +'"></span></a> <a class="button cmb-shift-flexible-rows move-down alignleft" href="#"><span class="'+ l10n.down_arrow_class +'"></span></a>' );
+				$( newRow ).find( '.cmb-remove-group-row' ).each( function() {
+					$( this ).addClass( 'cmb-remove-flexible-row' ).removeClass( 'cmb-remove-group-row' );
+				});
+				$( newRow ).find( '.button.cmb-remove-flexible-row' ).before( '<a class="button cmb-shift-flexible-rows move-up alignleft" href="#"><span class="'+ l10n.up_arrow_class +'"></span></a> <a class="button cmb-shift-flexible-rows move-down alignleft" href="#"><span class="'+ l10n.down_arrow_class +'"></span></a>' );
 				$( newRow ).find( '.cmb2-wysiwyg-placeholder' ).each( function() {
 					$this = $( this );
 					data  = $this.data();

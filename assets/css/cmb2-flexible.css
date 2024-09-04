@@ -63,4 +63,24 @@
 	background: #777;
 }
 
+.cmb2-metabox button.dashicons-before.dashicons-no-alt.cmb-remove-flexible-row {
+	-webkit-appearance: none !important;
+	background: none !important;
+	border: none !important;
+	position: absolute;
+	left: 0;
+	top: .5em;
+	line-height: 1em;
+	padding: 2px 6px 3px;
+	opacity: .5;
+}
 
+.cmb2-metabox button.dashicons-before.dashicons-no-alt.cmb-remove-flexible-row:not([disabled]) {
+	cursor: pointer;
+	color: #a00;
+	opacity: 1;
+}
+
+.cmb2-metabox button.dashicons-before.dashicons-no-alt.cmb-remove-flexible-row:not([disabled]):hover {
+	color: #f00;
+}

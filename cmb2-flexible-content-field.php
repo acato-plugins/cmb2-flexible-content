@@ -107,7 +107,7 @@ if ( ! class_exists( 'RKV_CMB2_Flexible_Content_Field', false ) ) {
 			echo '<ul class="cmb-flexible-add-list hidden">';
 			foreach ( $layouts as $layout_key => $layout ) {
 				echo '<li class="cmb-flexible-add-list-item">';
-				echo '<button data-grouptitle="Group {#}" class="cmb-add-group-row cmb2-add-flexible-row" data-type="' . esc_attr( $layout_key ) . '">' . esc_attr( $layout['title'] ) . '</button>';
+				echo '<button data-grouptitle="Group {#}" class="cmb2-add-flexible-row" data-type="' . esc_attr( $layout_key ) . '">' . esc_attr( $layout['title'] ) . '</button>';
 				echo '</li>';
 			}
 			echo '</ul>';
