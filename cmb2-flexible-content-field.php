@@ -352,7 +352,7 @@ if ( ! class_exists( 'RKV_CMB2_Flexible_Content_Field', false ) ) {
 				'show_names' => true,
 				'classes' => array( 'cmb-flexible-wrap' ),
 				'fields' => array(),
-				'options' => array(),
+				'options' => array( 'sortable' => true ),
 			);
 
 			$field = $field->get_field_clone( $group_args );
