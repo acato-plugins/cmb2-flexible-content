@@ -84,3 +84,9 @@
 .cmb2-metabox button.dashicons-before.dashicons-no-alt.cmb-remove-flexible-row:not([disabled]):hover {
 	color: #f00;
 }
+
+.cmb-type-group .cmb2-flexible-layout-row {
+	padding: unset;
+	border-bottom: unset;
+	display: none;
+}

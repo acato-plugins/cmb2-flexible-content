@@ -382,6 +382,7 @@ if ( ! class_exists( 'RKV_CMB2_Flexible_Content_Field', false ) ) {
 					'type' => 'hidden',
 					'value' => $type,
 				),
+				'classes' => array( 'cmb2-flexible-layout-row' ),
 			);
 			$group_args['fields'] = $subfields;
 			$field->set_prop( 'fields', $subfields );
