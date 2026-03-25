@@ -3,7 +3,7 @@
  * Plugin Name: CMB2 Field Type: Flexible Content
  * Plugin URI: https://github.com/reaktivstudios/cmb2-flexible-content
  * Description: Adds a flexible content field for CMB2
- * Version: 0.0.1
+ * Version: 1.0.0
  * Author: Reaktiv Studios
  * Author URI: https://reaktivstudios.com
  * License: GPLv2+
